@@ -3,9 +3,9 @@ package main
 import (
 	"time"
 
-	"fyne.io/fyne"
-	"fyne.io/fyne/container"
-	"fyne.io/fyne/widget"
+	"fyne.io/fyne/v2"
+	"fyne.io/fyne/v2/container"
+	"fyne.io/fyne/v2/widget"
 )
 
 func buildLogWindow() fyne.Window {

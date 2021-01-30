@@ -6,7 +6,7 @@ import (
 	"io/ioutil"
 	"strconv"
 
-	"fyne.io/fyne"
+	"fyne.io/fyne/v2"
 )
 
 //加载资源

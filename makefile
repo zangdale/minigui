@@ -4,3 +4,6 @@ test:
 
 build:
 	go build -ldflags -H=windowsgui
+
+package:
+	fyne package -os windows -icon Icon.png

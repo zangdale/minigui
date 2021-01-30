@@ -4,10 +4,10 @@ import (
 	"fmt"
 	"image/color"
 
-	"fyne.io/fyne/canvas"
-	"fyne.io/fyne/container"
+	"fyne.io/fyne/v2/canvas"
+	"fyne.io/fyne/v2/container"
 
-	"fyne.io/fyne"
+	"fyne.io/fyne/v2"
 )
 
 func buildPrefWindow() fyne.Window {

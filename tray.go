@@ -19,7 +19,7 @@ func onReady() {
 	for {
 		select {
 		case <-mAboutLink.ClickedCh:
-			open.Run("https://www.github.com/gettg")
+			open.Run("https://www.github.com/getbuguai")
 		case <-mPref.ClickedCh:
 			indexWindow.Show()
 

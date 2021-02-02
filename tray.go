@@ -1,8 +1,8 @@
 package main
 
 import (
-	"github.com/getlantern/systray"
 	"github.com/skratchdot/open-golang/open"
+	"minigui/systray"
 )
 
 func onReady() {

@@ -12,4 +12,4 @@ go get fyne.io/fyne/v2/cmd/fyne
 ```
 
 - [fyne.io/fyne](https://github.com/fyne-io/fyne)
-- [github.com/getlantern/systray](https://github.com/getlantern/systray)
+- [github.com/getbuguai/systray](https://github.com/getbuguai/systray)

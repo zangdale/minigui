@@ -1,41 +1,42 @@
 package main
 
 import (
+	"minigui/icon"
+
 	"github.com/getlantern/systray"
 	"github.com/skratchdot/open-golang/open"
 )
 
-func onReady() {
-	systray.SetIcon(trayIconResource)
-	systray.SetTitle("My APP")
-	systray.SetTooltip("My APP")
+func onReady(webUrl string) func() {
+	return func() {
+		systray.SetTemplateIcon(icon.Data, icon.Data)
+		//systray.SetTitle("CtrlC")
+		systray.SetTooltip("CtrlC")
 
-	mPref := systray.AddMenuItem("Main APP", "Open Main APP")
-	mLog := systray.AddMenuItem("Logs", "See Logs")
-	mQuit := systray.AddMenuItem("Quit", "Quit Go Reddit WallPaper")
-	systray.AddSeparator()
-	mAboutLink := systray.AddMenuItem("About", "About Me!")
+		mPref := systray.AddMenuItem("Open Web", "Open Web")
+		//mLog := systray.AddMenuItem("Logs", "See Logs")
+		mQuit := systray.AddMenuItem("Quit", "Quit")
+		systray.AddSeparator()
+		mAboutLink := systray.AddMenuItem("About", "About Me!")
 
-	for {
-		select {
-		case <-mAboutLink.ClickedCh:
-			open.Run("https://www.github.com/getbuguai")
-		case <-mPref.ClickedCh:
-			indexWindow.Show()
+		for {
+			select {
+			case <-mAboutLink.ClickedCh:
+				open.Run("https://space.bilibili.com/278413353")
+			case <-mPref.ClickedCh:
+				open.Run(webUrl)
 
-		case <-mLog.ClickedCh:
-			logWindow.Show()
+			//case <-mLog.ClickedCh:
+			// logWindow.Show()
 
-		case <-mQuit.ClickedCh:
-			systray.Quit()
-			return
+			case <-mQuit.ClickedCh:
+				systray.Quit()
+				return
+			}
 		}
 	}
 }
-func onExit() {
-	mainApp.Quit()
-}
 
-func startTray() {
-	systray.Run(onReady, onExit)
+func onExit() {
+	// mainApp.Quit()
 }

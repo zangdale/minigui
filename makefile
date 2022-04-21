@@ -1,9 +1,9 @@
 
 test:
-	echo "这个程序不太乖"
+	echo "zhangdale"
 
 build:
-	go build -ldflags -H=windowsgui
+	go build .
 
-package:
-	fyne package -os windows -icon Icon.png
+buildw:
+	go build -ldflags -H=windowsgui
